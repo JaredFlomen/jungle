@@ -1,6 +1,7 @@
 class CartsController < ApplicationController
 
   def show
+    #Renders views/carts/show.html.erb
   end
 
   def add_item
