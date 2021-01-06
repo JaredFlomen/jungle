@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     post   :remove_item
   end
 
+  get '/about', to: 'about#show'
+
   resources :orders, only: [:create, :show]
 
   namespace :admin do
