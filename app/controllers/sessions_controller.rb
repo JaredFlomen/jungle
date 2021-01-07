@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       #Save id to cookie
       session[:user_id] = user.id
+      redirect_to '/'
     else
       #Login fail, redirect to login form
       redirect_to '/login'
