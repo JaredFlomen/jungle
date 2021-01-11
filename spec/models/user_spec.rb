@@ -14,11 +14,11 @@ RSpec.describe User, type: :model do
     end
 
     it 'Emails must be unique' do
-      _existing_user = User.create(
+      @user = User.create(
         email: "jared@gmail.com"
       )
-      @user = User.new(email: 'dafd@gmail.com')
-      expect(@user).to_not be_valid
+      @userTest = User.new(email: 'dafd@gmail.com')
+      expect(@userTest).to_not be_valid
     end
 
     it 'Valid when all info is present' do
