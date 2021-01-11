@@ -20,5 +20,11 @@ RSpec.describe User, type: :model do
       @user = User.new(email: 'dafd@gmail.com')
       expect(@user).to_not be_valid
     end
+
+    it 'Valid when all info is present' do
+      @user = User.new(first_name: 'jared', last_name: 'flo', password: '123', password_confirmation: '123', email: 'jared@gmail.com')
+      expect(@user).to be_valid
+    end
+    
   end
 end
