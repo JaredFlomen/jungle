@@ -42,5 +42,30 @@ RSpec.describe User, type: :model do
       expect(user).to_not be(nil)
     end
 
+    it 'should pass with spaces around the email' do
+      user = User.new(
+        first_name: 'jared',
+        last_name: 'flo',
+        email: 'jared@gmail.com',
+        password: 'password',
+        password_confirmation: 'password'
+      )
+      user.save
+      user = User.authenticate_with_credentials('  jared@gmail.com  ', 'password')
+      expect(user).to_not be(nil)
+    end
+
+    it 'should pass with wrong cases in the email' do
+      user = User.new(
+        first_name: 'jared',
+        last_name: 'flo',
+        email: 'jared@gmail.com',
+        password: 'password',
+        password_confirmation: 'password'
+      )
+      user.save
+      user = User.authenticate_with_credentials('JaReD@gmaIl.com', 'password')
+      expect(user).to_not be(nil)
+    end
   end
 end
