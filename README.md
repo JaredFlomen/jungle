@@ -27,6 +27,19 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * PostgreSQL 9.x
 * Stripe
 
-## Walkthrough
+## Captures
 
+### Home
+![Home](https://github.com/JaredFlomen/jungle/blob/master/docs/home.png?raw=true)
 
+### Cart
+![Cart](https://github.com/JaredFlomen/jungle/blob/master/docs/cart.png?raw=true)
+
+### Product Description
+![Product](https://github.com/JaredFlomen/jungle/blob/master/docs/product_description.png?raw=true)
+
+### Admin - Categories
+![Categories](https://github.com/JaredFlomen/jungle/blob/master/docs/admin_categories.png?raw=true)
+
+### Admin - Products
+![Admin_Products](https://github.com/JaredFlomen/jungle/blob/master/docs/admin_products.png?raw=true)
