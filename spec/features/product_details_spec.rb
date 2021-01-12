@@ -17,10 +17,14 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
     end
   end
 
-  scenario "They see all products" do
+  scenario "They click on one product's details" do
     # ACT
     visit root_path
-    
+    within first('.product') do
+      click_link 'Details'
+    end
+    expect(page).to have_text('Name')
+    save_screenshot('product_click.png')
   end
 
 end
